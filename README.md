@@ -159,14 +159,6 @@ from hourly_sale
 group by shift;
 ```
 
-## **FINDING**
-### **Sales Summary**: 
-Detailed reports that summarize total sales, customer demographics, and category performance.
-### **Trend Analysis**: 
-Insights into sales trends in different months and shifts.
-Customer Insights: 
-Reports on top customers and number of unique customers per category.
-
 ## **CONCLUSION**
 This project is a form of direct application of the use of SQL for data analysis which consists of creating databases and tables, cleaning data, exploring and analyzing data, and answering several business questions using SQL queries. Through this project, it is hoped that we can improve our ability to process data using SQL and can help businesses make better decisions.
 
