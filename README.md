@@ -136,6 +136,39 @@ group by customer_id
 order by net_sales desc
 limit 5;
 ```
+### 9.Write a SQL query to find the number of unique customers who purchased items from each category.:
+```sql
+select category,
+count(distinct customer_id) as cnt_customer
+from retail_sales
+group by category;
+```
+### 10.Write a SQL query to create each shift and number of orders (Example Morning <12, Afternoon Between 12 & 17, Evening >17):
+```sql
+WITH hourly_sale as
+(select *,
+	CASE
+    when EXTRACT(HOUR FROM sale_time) < 12 then "Morning"
+    when EXTRACT(HOUR FROM sale_time) between 12 and 17 then "Afternoon"
+    else "Evening"
+end as shift
+from retail_sales
+)
+select shift, count(*) as total_Order
+from hourly_sale
+group by shift;
+```
+
+## **FINDING**
+### **Sales Summary**: 
+Detailed reports that summarize total sales, customer demographics, and category performance.
+### **Trend Analysis**: 
+Insights into sales trends in different months and shifts.
+Customer Insights: 
+Reports on top customers and number of unique customers per category.
+
+## **CONCLUSION**
+This project is a form of direct application of the use of SQL for data analysis which consists of creating databases and tables, cleaning data, exploring and analyzing data, and answering several business questions using SQL queries. Through this project, it is hoped that we can improve our ability to process data using SQL and can help businesses make better decisions.
 
   
 
